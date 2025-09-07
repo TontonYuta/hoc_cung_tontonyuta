@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="toan12.html" class="nav-link"><i class="fa-solid fa-calculator"></i> Toán 12</a>
+      <a href="sat.html" class="nav-link"><i class="fa-solid fa-book-open"></i> SAT</a>
+      <a href="tsa.html" class="nav-link"><i class="fa-solid fa-pen-ruler"></i> TSA</a>
+      <a href="hsa.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> HSA</a>
+    </div>
+    <button id="toggleMusicBtn" onclick="toggleMusic()">🔊 Tắt nhạc nền</button>
+  </nav>
+
+  <!-- Nội dung chính -->
+  <div class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>🎓 Website Học Toán</h1>
+        <p>Nơi bạn có thể học Toán 12, luyện SAT, TSA, HSA với công thức ngắn gọn và quiz thú vị.</p>
+        <a href="toan12.html" class="btn-main">Bắt đầu với Toán 12</a>
+      </div>
+    </section>
+
+    <!-- Random Quote -->
+    <section class="quote-box">
+      <p id="randomQuote">Loading...</p>
+    </section>
+
+    <!-- Navigation Cards -->
+    <section class="nav-cards">
+      <div class="card" onclick="location.href='toan12.html'">
+        <i class="fa-solid fa-calculator"></i>
+        <h3>Toán 12</h3>
+        <p>Công thức + Quiz theo chuyên đề</p>
+      </div>
+      <div class="card" onclick="location.href='sat.html'">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>SAT</h3>
+        <p>Practice Math for SAT</p>
+      </div>
+      <div class="card" onclick="location.href='tsa.html'">
+        <i class="fa-solid fa-pen-ruler"></i>
+        <h3>TSA</h3>
+        <p>Thinking Skills Assessment</p>
+      </div>
+      <div class="card" onclick="location.href='hsa.html'">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h3>HSA</h3>
+        <p>Higher Skills Assessment</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Website Học Toán. Thiết kế bởi TontonYuta. 
+      Mọi đóng góp xin gửi về 
+      <a href="tel:0963278149">Zalo/SDT: 0963278149</a>
+      <span class="social">
+        <a href="https://www.facebook.com/yuta.primer"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://github.com/TontonYuta"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:huyhoang6altt@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </span>
+    </p>
+  </footer>
+
+  <!-- Script -->
+  <script src="static/js/script.js" defer></script>
+  <script>
+    const quotes = [
+      "📖 Học, học nữa, học mãi – V.I. Lenin",
+      "💡 Kiến thức là sức mạnh – Francis Bacon",
+      "🚀 Mỗi ngày một chút, bạn sẽ đi rất xa",
+      "🔥 Không có áp lực, không có kim cương",
+      "🌱 Học tập là hạt giống cho thành công",
+      "🎯 Kỷ luật là cây cầu nối giữa mục tiêu và thành tựu – Jim Rohn",
+      "🌟 Thất bại là mẹ của thành công",
+      "📚 Đọc một cuốn sách tốt bằng trò chuyện với một người vĩ đại – Descartes",
+      "💭 Học mà không suy nghĩ thì uổng phí, suy nghĩ mà không học thì nguy hiểm – Khổng Tử",
+      "⚡ Thành công là tổng cộng của những nỗ lực nhỏ được lặp đi lặp lại hàng ngày",
+      "✨ Người biết đọc nhưng không đọc cũng chẳng hơn người mù chữ – Mark Twain",
+      "🌈 Tương lai thuộc về những ai tin vào vẻ đẹp của giấc mơ – Eleanor Roosevelt",
+      "🕰️ Đừng đợi. Thời gian sẽ không bao giờ ‘đúng lúc’ – Napoleon Hill",
+      "🎓 Giáo dục là vũ khí mạnh nhất bạn có thể dùng để thay đổi thế giới – Nelson Mandela",
+      "🌍 Người học suốt đời là người chưa bao giờ ngừng lớn lên",
+      "📝 Viết là cách tốt nhất để học gấp đôi – Seneca",
+      "🧠 Trí tuệ đến từ kinh nghiệm. Kinh nghiệm thường đến từ sai lầm",
+      "🔑 Chìa khóa của thành công là tập trung vào mục tiêu, không phải chướng ngại",
+      "🕊️ Tri thức là tự do",
+      "🔥 Nếu bạn có giấc mơ, hãy nắm lấy nó và không bao giờ buông – Carol Burnett"
+    ];
+
+    const quoteEl = document.getElementById("randomQuote");
+
+    function showQuote() {
+      quoteEl.classList.add("fade");
+      setTimeout(() => {
+        quoteEl.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+        quoteEl.classList.remove("fade");
+      }, 800);
+    }
+
+    showQuote();
+    setInterval(showQuote, 4000);
+  </script>
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Âm thanh -->
+  <audio id="bgMusic" src="static/audio/bg.mp3" loop></audio>
+  <audio id="soundCorrect" src="static/audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="static/audio/wrong.mp3"></audio>
+
+</body>
+</html>

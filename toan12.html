@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Chuyên đề Toán 12: công thức, ví dụ, bài tập trắc nghiệm có lời giải chi tiết.">
+  <title>Chuyên đề Toán 12</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="content">
+      <!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <a href="index.html" aria-label="Trang chủ"><i class="fa-solid fa-house"></i> Trang chủ</a>
+  </div>
+  <button class="menu-toggle" aria-label="Mở/Đóng menu" aria-expanded="false">
+    <i class="fa-solid fa-bars menu-icon"></i>
+    <i class="fa-solid fa-times close-icon"></i>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="toan12.html" class="nav-link active"><i class="fa-solid fa-calculator"></i> Toán 12</a>
+    <a href="sat.html" class="nav-link"><i class="fa-solid fa-book-open"></i> SAT</a>
+    <a href="tsa.html" class="nav-link"><i class="fa-solid fa-pen-ruler"></i> TSA</a>
+    <a href="hsa.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> HSA</a>
+    <a href="references.html" class="nav-link"><i class="fa-solid fa-book"></i> Tài liệu tham khảo</a>
+    <a href="hoc-cung-tontonyuta.html" class="nav-link"><i class="fa-solid fa-user-group"></i> Học cùng TontonYuta</a>
+  </div>
+
+</nav>
+
+
+      <div class="container">
+        <h1>Chuyên đề Toán 12</h1>
+        <p>Bấm vào từng thẻ để xem nhanh công thức và luyện quiz.</p>
+
+        <!-- Quote Box -->
+        <section class="quote-box" role="complementary">
+          <p id="randomQuote">"Toán học là chiếc chìa khóa của vũ trụ!"</p>
+        </section>
+
+        <!-- Toán 12 - Cấu trúc đề thi TN THPT 2025 -->
+<section id="toan12-exam-2025" class="toan12-exam-2025">
+  <div class="tabs" role="tablist">
+    <button class="tab-btn active" data-target="#toan12ExamTable" aria-selected="true" role="tab">Bảng tổng quan</button>
+    <button class="tab-btn" data-target="#toan12ExamCards" aria-selected="false" role="tab">Card trực quan</button>
+  </div>
+
+  <!-- View 1: Table -->
+  <div id="toan12ExamTable" class="tab-panel" role="tabpanel">
+    <table class="toan12-table" aria-label="Cấu trúc đề thi Toán TN THPT 2025">
+      <thead>
+        <tr>
+          <th>Phần thi</th>
+          <th>Hình thức</th>
+          <th>Số câu</th>
+          <th>Điểm</th>
+          <th>Ghi chú</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Phần I</td>
+          <td>Trắc nghiệm 4 lựa chọn (1 đáp án đúng)</td>
+          <td>12</td>
+          <td>0.25 đ/câu</td>
+          <td>Giống kiểu trắc nghiệm truyền thống</td>
+        </tr>
+        <tr>
+          <td>Phần II</td>
+          <td>Trắc nghiệm Đúng/Sai (4 ý trong 1 câu)</td>
+          <td>4</td>
+          <td>0.1–1 đ/câu</td>
+          <td>1 ý đúng: 0.1đ<br>2 ý đúng: 0.25đ<br>3 ý đúng: 0.5đ<br>4 ý đúng: 1đ</td>
+        </tr>
+        <tr>
+          <td>Phần III</td>
+          <td>Trắc nghiệm trả lời ngắn (điền kết quả)</td>
+          <td>6</td>
+          <td>0.5 đ/câu</td>
+          <td>Môn Toán: 0.5đ<br>Các môn khác: 0.25đ</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><strong>Tổng</strong></td>
+          <td>3 phần thi</td>
+          <td>22</td>
+          <td>10 điểm</td>
+          <td>Thời gian: 90 phút</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- View 2: Cards -->
+  <div id="toan12ExamCards" class="tab-panel" role="tabpanel" hidden>
+    <div class="grid-container three-cols">
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-list-ol"></i>
+          <h4>Phần I</h4>
+          <span class="info-badge">12 câu · 0.25đ</span>
+        </div>
+        <p class="card-desc">
+          Trắc nghiệm 4 lựa chọn, 1 đáp án đúng. 
+          Giúp kiểm tra kiến thức cơ bản – giống dạng cũ.
+        </p>
+      </div>
+
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-check-square"></i>
+          <h4>Phần II</h4>
+          <span class="info-badge">4 câu · 0.1–1đ</span>
+        </div>
+        <p class="card-desc">
+          Trắc nghiệm đúng/sai (mỗi câu có 4 ý). 
+          Điểm tăng dần theo số ý đúng: 1 ý = 0.1đ → 4 ý = 1đ. 
+          Phân hóa mạnh, hạn chế “khoanh may rủi”.
+        </p>
+      </div>
+
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-pen"></i>
+          <h4>Phần III</h4>
+          <span class="info-badge">6 câu · 0.5đ</span>
+        </div>
+        <p class="card-desc">
+          Trắc nghiệm trả lời ngắn, thí sinh điền kết quả. 
+          Môn Toán được 0.5đ/câu (môn khác chỉ 0.25đ). 
+          Yêu cầu tính toán chính xác, không chọn đáp án.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="library" class="grid-container">
+  <div class="card" onclick="showSubtopics('logarit')"><i class="fa-solid fa-square-root-variable"></i><p>Logarit</p></div>
+  <div class="card" onclick="showSubtopics('daoham')"><i class="fa-solid fa-calculator"></i><p>Đạo hàm</p></div>
+  <div class="card" onclick="showSubtopics('xacsuat')"><i class="fa-solid fa-dice"></i><p>Xác suất</p></div>
+  <div class="card" onclick="showSubtopics('hamso')"><i class="fa-solid fa-chart-line"></i><p>Hàm số</p></div>
+  <div class="card" onclick="showSubtopics('thongke')"><i class="fa-solid fa-chart-pie"></i><p>Thống kê</p></div>
+  <div class="card" onclick="showSubtopics('tichphan')"><i style="font-style: normal; font-size: 40px;">∫</i><p>Tích phân</p></div>
+  <div class="card" onclick="showSubtopics('vecto')"><i class="fa-solid fa-arrows-left-right"></i><p>Vecto</p></div>
+  <div class="card" onclick="showSubtopics('heOxyz')"><i class="fa-solid fa-cube"></i><p>Hệ Oxyz</p></div>
+</div>
+
+        <div id="snippetBox" class="snippet-box">👉 Chọn 1 thẻ phía trên để xem kiến thức ở đây</div>
+
+        <div id="quizBox" class="quiz-box" style="display:none;">
+          <h3>📝 Trắc nghiệm nhanh</h3>
+          <div id="quizQuestion"></div>
+          <ul id="quizOptions"></ul>
+          <div class="quiz-buttons">
+            <button onclick="checkAnswer()">✅ Nộp bài</button>
+            <button onclick="prevQuestion()">⬅ Câu trước</button>
+            <button onclick="nextQuestion()">Câu tiếp ➡</button>
+          </div>
+          <div id="quizResult" class="quiz-result"></div>
+          <div id="quizStats">Kết quả: 0/0</div>
+        </div>
+      </div>
+    </main>
+
+
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- Logarit -->
+<script src="static/js/logarit_coban.js"></script>
+<script src="static/js/logarit_pt.js"></script>
+<script src="static/js/logarit_bt.js"></script>
+
+<!-- Đạo hàm -->
+<script src="static/js/daoham_dinhnghia.js"></script>
+<script src="static/js/daoham_quytac.js"></script>
+<script src="static/js/daoham_ungdung.js"></script>
+
+<!-- Xác suất -->
+<script src="static/js/xs_codiem.js"></script>
+<script src="static/js/xs_codk.js"></script>
+<script src="static/js/xs_bayes.js"></script>
+
+<!-- Hàm số -->
+<script src="static/js/hamso_chuong1.js"></script>
+<script src="static/js/hamso_chuong2.js"></script>
+<script src="static/js/hamso_chuong3.js"></script>
+<script src="static/js/hamso_chuong4.js"></script>
+<script src="static/js/hamso_chuong5.js"></script>
+<script src="static/js/hamso_chuong6.js"></script>
+<script src="static/js/hamso_chuong7.js"></script>
+
+<!-- Thống kê -->
+<script src="static/js/tk_p1.js"></script>
+<script src="static/js/tk_p2.js"></script>
+<script src="static/js/tk_p3.js"></script>
+
+<!-- Tích phân -->
+<script src="static/js/tp_nguyenham.js"></script>
+<script src="static/js/tp_quytac.js"></script>
+<script src="static/js/tp_ungdung.js"></script>
+
+<!-- Vecto -->
+<script src="static/js/vt_coban.js"></script>
+<script src="static/js/vt_tich.js"></script>
+<script src="static/js/vt_ungdung.js"></script>
+<!-- Hệ Oxyz -->
+<script src="static/js/oxyz_cau.js"></script>
+<script src="static/js/oxyz_mt.js"></script>
+<script src="static/js/oxyz_dt.js"></script>
+<script src="static/js/oxyz_goc.js"></script>
+
+<!-- Core -->
+<script src="static/js/quiz_generator.js"></script>
+<script src="static/js/quiz_generator_xs.js"></script>
+<script src="static/js/main.js"></script>
+<script src="static/script.js" defer></script>
+
+  <!-- Âm thanh -->
+  <audio id="bgMusic" src="static/audio/bg.mp3" loop></audio>
+  <audio id="soundCorrect" src="static/audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="static/audio/wrong.mp3"></audio>
+
+  <!-- Submenu JS -->
+<script>
+  function showSubtopics(type) {
+    const library = document.getElementById("library");
+
+    if (type === "logarit") {
+      library.innerHTML = `
+        <div class="card" onclick="showSnippet('logarit_coban')"><p>1. Công thức cơ bản</p></div>
+        <div class="card" onclick="showSnippet('logarit_pt')"><p>2. Phương trình logarit</p></div>
+        <div class="card" onclick="showSnippet('logarit_bt')"><p>3. Bất phương trình logarit</p></div>
+        <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+      `;
+    }
+    else if (type === "daoham") {
+      library.innerHTML = `
+        <div class="card" onclick="showSnippet('daoham_dinhnghia')"><p>1. Định nghĩa đạo hàm</p></div>
+        <div class="card" onclick="showSnippet('daoham_quytac')"><p>2. Quy tắc tính</p></div>
+        <div class="card" onclick="showSnippet('daoham_ungdung')"><p>3. Ứng dụng đạo hàm</p></div>
+        <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+      `;
+    }
+    else if (type === "xacsuat") {
+      library.innerHTML = `
+        <div class="card" onclick="showSnippet('xs_codiem')"><p>1. Xác suất cổ điển</p></div>
+        <div class="card" onclick="showSnippet('xs_codk')"><p>2. Xác suất có điều kiện</p></div>
+        <div class="card" onclick="showSnippet('xs_bayes')"><p>3. Công thức Bayes</p></div>
+        <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+      `;
+    }
+    else if (type === "hamso") {
+        library.innerHTML = `
+          <div class="card" onclick="showSnippet('hamso_dondon')"><p>1. Tính đơn điệu</p></div>
+          <div class="card" onclick="showSnippet('hamso_cuctri')"><p>2. Cực trị</p></div>
+          <div class="card" onclick="showSnippet('hamso_gtln')"><p>3. GTLN - GTNN</p></div>
+          <div class="card" onclick="showSnippet('hamso_tiemcan')"><p>4. Tiệm cận</p></div>
+          <div class="card" onclick="showSnippet('hamso_nhandien')"><p>5. Nhận diện hàm số</p></div>
+          <div class="card" onclick="showSnippet('hamso_tuonggiao')"><p>6. Tương giao đồ thị</p></div>
+          <div class="card" onclick="showSnippet('hamso_ungdung')"><p>7. Ứng dụng thực tế</p></div>
+          <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+        `;
+      }
+else if (type === "thongke") {
+  library.innerHTML = `
+    <div class="card" onclick="showSnippet('tk_p1')"><p>1. Tần số, số trung bình</p></div>
+    <div class="card" onclick="showSnippet('tk_p2')"><p>2. Tứ phân vị</p></div>
+    <div class="card" onclick="showSnippet('tk_p3')"><p>3. Mốt, độ phân tán</p></div>
+    <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+  `;
+}
+
+    else if (type === "tichphan") {
+      library.innerHTML = `
+        <div class="card" onclick="showSnippet('tp_nguyenham')"><p>1. Nguyên hàm</p></div>
+        <div class="card" onclick="showSnippet('tp_quytac')"><p>2. Quy tắc tích phân</p></div>
+        <div class="card" onclick="showSnippet('tp_ungdung')"><p>3. Ứng dụng tích phân</p></div>
+        <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+      `;
+    }
+else if (type === "vecto") {
+  library.innerHTML = `
+    <div class="card" onclick="showSnippet('vt_coban')"><p>1. Cơ bản</p></div>
+    <div class="card" onclick="showSnippet('vt_tich')"><p>2. Tích vô & có hướng</p></div>
+    <div class="card" onclick="showSnippet('vt_ungdung')"><p>3. Ứng dụng trong không gian</p></div>
+    <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+  `;
+}
+
+else if (type === "heOxyz") {
+  library.innerHTML = `
+    <div class="card" onclick="showSnippet('oxyz_cau')"><p>1. Mặt cầu</p></div>
+    <div class="card" onclick="showSnippet('oxyz_mt')"><p>2. Mặt phẳng</p></div>
+    <div class="card" onclick="showSnippet('oxyz_dt')"><p>3. Đường thẳng</p></div>
+    <div class="card" onclick="showSnippet('oxyz_goc')"><p>4. Góc trong không gian</p></div>
+    <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+  `;
+}
+
+  }
+
+  function resetMainTopics() {
+    location.reload(); // Reload lại danh sách chính
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài liệu tham khảo</title>
+  <link rel="stylesheet" href="static/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- MathJax config -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+  <style>
+
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px 20px;
+      }
+    }
+
+    /* Container styles */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Accordion styles */
+    .parent-card {
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 6px;
+    }
+
+    .sub-cards {
+      display: none;
+      margin-top: 5px;
+      margin-left: 20px;
+    }
+
+    .parent-card.active .sub-cards {
+      display: block;
+    }
+
+    .sub-card {
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .toggle-icon {
+      transition: transform 0.3s;
+    }
+
+    .parent-card.active .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Footer styles */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .social i {
+      margin: 0 10px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+      <!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <a href="index.html" aria-label="Trang chủ"><i class="fa-solid fa-house"></i> Trang chủ</a>
+  </div>
+  <button class="menu-toggle" aria-label="Mở/Đóng menu" aria-expanded="false">
+    <i class="fa-solid fa-bars menu-icon"></i>
+    <i class="fa-solid fa-times close-icon"></i>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="toan12.html" class="nav-link"><i class="fa-solid fa-calculator"></i> Toán 12</a>
+    <a href="sat.html" class="nav-link"><i class="fa-solid fa-book-open"></i> SAT</a>
+    <a href="tsa.html" class="nav-link"><i class="fa-solid fa-pen-ruler"></i> TSA</a>
+    <a href="hsa.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> HSA</a>
+    <a href="references.html" class="nav-link active"><i class="fa-solid fa-book"></i> Tài liệu tham khảo</a>
+    <a href="hoc-cung-tontonyuta.html" class="nav-link"><i class="fa-solid fa-user-group"></i> Học cùng TontonYuta</a>
+  </div>
+
+</nav>
+
+
+    <!-- Nội dung -->
+    <div class="container">
+      <h1>📚 Tài liệu tham khảo</h1>
+      <p>Dưới đây là danh sách sách, website và tài liệu học tập hữu ích.</p>
+      <section class="references-list">
+        <!-- Toán 12 -->
+        <div class="card parent-card">
+          <div class="card-header">
+            <i class="fa-solid fa-book"></i>
+            <h3>Sách toán 12</h3>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <div class="sub-cards">
+            <!-- Bộ Chân Trời Sáng Tạo -->
+            <div class="card sub-card">
+              <h4>Bộ Chân Trời Sáng Tạo</h4>
+              <p>
+                <a href="https://drive.google.com/file/d/1mlYVcXTwi023jSlEf4JPIecc_Us7359I/view?usp=drive_link" target="_blank">Tập 1</a> & 
+                <a href="https://drive.google.com/file/d/1Yqj5q28Sic1lf54MJTby8vJu0_JhAeYU/view?usp=drive_link" target="_blank">Tập 2</a>:
+                Bài tập cơ bản.
+              </p>
+            </div>
+            <!-- Bộ Kết Nối Tri Thức -->
+            <div class="card sub-card">
+              <h4>Bộ Kết Nối Tri Thức</h4>
+              <p>
+                <a href="https://drive.google.com/file/d/1mlYVcXTwi023jSlEf4JPIecc_Us7359I/view?usp=drive_link" target="_blank">Tập 1</a> & 
+                <a href="https://drive.google.com/file/d/1Yqj5q28Sic1lf54MJTby8vJu0_JhAeYU/view?usp=drive_link" target="_blank">Tập 2</a>:
+                Bài tập cơ bản.
+              </p>
+            </div>
+            <!-- Bộ Cánh Diều -->
+            <div class="card sub-card">
+              <h4>Bộ Cánh Diều</h4>
+              <p>
+                <a href="https://drive.google.com/file/d/1tKY9QlzUq84xfiJqvz8BR7BrRHONqlSf/view?usp=drive_link" target="_blank">Tập 1</a> & 
+                <a href="https://drive.google.com/file/d/1fwDXY6T_lZWAE5P948KJA_klOkFFbeKZ/view?usp=sharing" target="_blank">Tập 2</a>:
+                Bài tập cơ bản.
+              </p>
+            </div>
+            <!-- Bộ Học Toán Cùng TontonYuta -->
+            <div class="card sub-card">
+              <h4>Bộ Học Toán Cùng TontonYuta</h4>
+              <p>
+                <a href="static/pdf/tontonyuta_1.pdf" target="_blank">Bộ từ mất gốc đến 7+ (Tổng hợp)</a>:
+                Lý thuyết ngắn + bài tập trắc nghiệm.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAT -->
+        <div class="card parent-card">
+          <div class="card-header">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>SAT Practice Tests</h3>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <div class="sub-cards">
+            <!-- Đề 1 -->
+            <div class="card sub-card">
+              <h4>Practice Test 1</h4>
+              <p>
+                <a href="static/pdf/sat-practice-test-1-digital.pdf" target="_blank">Đề thi</a> | 
+                <a href="static/pdf/sat-practice-test-1-answers-digital.pdf" target="_blank">Giải thích chi tiết</a> | 
+                <a href="static/pdf/scoring-sat-practice-test-1-digital.pdf" target="_blank">Đáp án trắc nghiệm</a>
+              </p>
+            </div>
+            <!-- Đề 2 -->
+            <div class="card sub-card">
+              <h4>Practice Test 2</h4>
+              <p>
+                <a href="static/pdf/sat-practice-test-2-digital.pdf" target="_blank">Đề thi</a> | 
+                <a href="static/pdf/sat-practice-test-2-answers-digital.pdf" target="_blank">Giải thích chi tiết</a> | 
+                <a href="static/pdf/scoring-sat-practice-test-2-digital.pdf" target="_blank">Đáp án trắc nghiệm</a>
+              </p>
+            </div>
+            <!-- Đề 3 -->
+            <div class="card sub-card">
+              <h4>Practice Test 3</h4>
+              <p>
+                <a href="static/pdf/sat-practice-test-3-digital.pdf" target="_blank">Đề thi</a> | 
+                <a href="static/pdf/sat-practice-test-3-answers-digital.pdf" target="_blank">Giải thích chi tiết</a> | 
+                <a href="static/pdf/scoring-sat-practice-test-3-digital.pdf" target="_blank">Đáp án trắc nghiệm</a>
+              </p>
+            </div>
+            <!-- Đề 4 -->
+            <div class="card sub-card">
+              <h4>Practice Test 4</h4>
+              <p>
+                <a href="static/pdf/sat-practice-test-4-digital.pdf" target="_blank">Đề thi</a> | 
+                <a href="static/pdf/sat-practice-test-4-answers-digital.pdf" target="_blank">Giải thích chi tiết</a> | 
+                <a href="static/pdf/scoring-sat-practice-test-4-digital.pdf" target="_blank">Đáp án trắc nghiệm</a>
+              </p>
+            </div>
+            <!-- Đề 5 -->
+            <div class="card sub-card">
+              <h4>Practice Test 5</h4>
+              <p>
+                <a href="static/pdf/sat-practice-test-5-digital.pdf" target="_blank">Đề thi</a> | 
+                <a href="static/pdf/sat-practice-test-5-answers-digital.pdf" target="_blank">Giải thích chi tiết</a> | 
+                <a href="static/pdf/scoring-sat-practice-test-5-digital.pdf" target="_blank">Đáp án trắc nghiệm</a>
+              </p>
+            </div>
+            <!-- Đề 6 -->
+            <div class="card sub-card">
+              <h4>Practice Test 6</h4>
+              <p>
+                <a href="static/pdf/sat-practice-test-6-digital.pdf" target="_blank">Đề thi</a> | 
+                <a href="static/pdf/sat-practice-test-6-answers-digital.pdf" target="_blank">Giải thích chi tiết</a> | 
+                <a href="static/pdf/scoring-sat-practice-test-6-digital.pdf" target="_blank">Đáp án trắc nghiệm</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TSA -->
+        <div class="card parent-card">
+          <div class="card-header">
+            <i class="fa-solid fa-pen-ruler"></i>
+            <h3>TSA</h3>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <div class="sub-cards">
+            <!-- Cuốn Cẩm nang ôn thi Đánh giá Tư duy -->
+            <div class="card sub-card">
+              <h4>Cẩm nang ôn thi Đánh giá Tư duy</h4>
+              <p>
+                <a href="https://drive.google.com/file/d/1QGNOdWFALjj3YNwqP0lcewOzhGluFFVF/view?usp=sharing" target="_blank">
+  TSA Cẩm nang
+</a>
+
+              </p>
+            </div>
+            <!-- Cuốn Tốc chiến -->
+            <div class="card sub-card">
+              <h4>Tốc chiến</h4>
+              <p>
+                <a href="https://drive.google.com/file/d/1tSBcE4Ixk8a6fNfKJFZqCm2_x6-eOf_S/view?usp=sharing" target="_blank">PDF</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HSA -->
+        <div class="card parent-card">
+          <div class="card-header">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>HSA</h3>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <div class="sub-cards">
+            <div class="card sub-card">
+              <p>Guide và workbook cho Highschool Student Assessment.</p>
+              <a href="https://drive.google.com/file/d/1vVVudEuJRtJu3nvcCHd87gTZxyktjoCF/view?usp=sharing " target="_blank" class="pdf-link">
+                📘 PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Website hữu ích -->
+        <div class="card parent-card">
+          <div class="card-header">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Website tham khảo</h3>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <div class="sub-cards">
+            <div class="card sub-card">
+              <ul>
+                <li>
+                  <a href="https://tailieuonthi.org" target="_blank">1. tailieuonthi.org</a><br>
+                  <small>Website chia sẻ tài liệu ôn thi, đề thi thử các kỳ thi: Đánh giá tư duy Bách Khoa (TSA); Đánh giá năng lực ĐHQGHN (HSA); Đánh giá năng lực ĐHQG TPHCM (VACT); Đánh giá năng lực ĐH Sư Phạm Hà Nội (SPT); kỳ thi tốt nghiệp THPT. Cung cấp tài liệu nền tảng lớp 10, 11, 12 các môn học.</small>
+                </li>
+                <li>
+                  <a href="https://app.csw.live" target="_blank">2. app.csw.live</a><br>
+                  <small>Trang web với phong cách "Study with me", giao diện đẹp mắt, giúp bạn "focus", nâng cao hiệu quả học tập và làm việc. Cá nhân mình thấy rất hợp.</small>
+                </li>
+                <li>
+                  <a href="https://vietjack.com" target="_blank">3. vietjack.com</a><br>
+                  <small>Tổng hợp lý thuyết, bài tập có lời giải cho nhiều môn học, từ tiểu học đến đại học.</small>
+                </li>
+                <li>
+                  <a href="https://toanmath.com" target="_blank">4. toanmath.com</a><br>
+                  <small>Website tự học với "rất rất nhiều" tài liệu và đề thi toán THPT miễn phí. Nếu tận dụng tốt thì sẽ rất có ích với các bạn khá, giỏi.</small>
+                </li>
+                <li>
+                  <a href="https://www.nbv.edu.vn" target="_blank">5. Nguyễn Bảo Vương Blog</a><br>
+                  <small>Đầy đủ tài liệu cho các lớp THPT, được biên soạn rất kĩ bởi thầy NBV, từ lý thuyết cho đến bài tập vận dụng, đề thi, sổ tay công thức,... không thiếu gì, nhưng các bạn học phải chọn lọc, lựa sức mình nhé.</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video học tập -->
+        <div class="card parent-card">
+          <div class="card-header">
+            <i class="fa-solid fa-video"></i>
+            <h3>Video học tập</h3>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <div class="sub-cards">
+            <div class="card sub-card">
+              <p>
+                Kênh YouTube: <a href="https://www.youtube.com/@TontonYuta" target="_blank">TontonYuta</a><br>
+                Kênh TikTok: <a href="https://www.tiktok.com/@tontons.yuta" target="_blank">TontonYuta</a><br>
+                Giải thích chi tiết các dạng Toán 12, SAT, TSA, HSA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Audio -->
+    <audio id="bgMusic" src="static/audio/bg.mp3" loop></audio>
+    <audio id="soundCorrect" src="static/audio/correct.mp3"></audio>
+    <audio id="soundWrong" src="static/audio/wrong.mp3"></audio>
+
+    <!-- JS for Navbar, Accordion, and Music -->
+  <script src="static/js/main.js"></script>
+  
+  </div>
+</body>
+</html>

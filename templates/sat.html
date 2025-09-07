@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Practice{% endblock %}
+
+{% block content %}
+  <h1>📘 SAT Practice</h1>
+  <p>Bấm vào từng thẻ để xem kiến thức SAT quan trọng và làm quiz luyện tập.</p>
+
+  <!-- Thư viện snippet -->
+  <div id="library" class="grid-container">
+    <div class="card" onclick="showSnippet('sat_algebra')">
+      <i class="fa-solid fa-square-root-variable"></i>
+      <p>Algebra</p>
+    </div>
+    <div class="card" onclick="showSnippet('sat_advanced')">
+      <i class="fa-solid fa-infinity"></i>
+      <p>Advanced Math</p>
+    </div>
+    <div class="card" onclick="showSnippet('sat_problem')">
+      <i class="fa-solid fa-shapes"></i>
+      <p>Problem Solving & Data</p>
+    </div>
+    <div class="card" onclick="showSnippet('sat_geometry')">
+      <i class="fa-solid fa-drafting-compass"></i>
+      <p>Geometry</p>
+    </div>
+  </div>
+
+  <!-- Box hiển thị kiến thức -->
+  <div id="snippetBox" class="snippet-box">
+    👉 Chọn 1 thẻ phía trên để xem kiến thức ở đây
+  </div>
+
+  <!-- Box Quiz -->
+  <div id="quizBox" class="quiz-box" style="display:none;">
+    <h3>📝 SAT Quick Quiz</h3>
+    <div id="quizQuestion"></div>
+    <ul id="quizOptions"></ul>
+    <div class="quiz-buttons">
+      <button onclick="checkAnswer()">Check</button>
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+    <p id="quizResult"></p>
+    <p id="quizStats">Result: 0/0</p>
+  </div>
+
+ <!-- Import từng chuyên đề SAT -->
+<script src="{{ url_for('static', filename='js/sat_algebra.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sat_advanced.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sat_problem.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sat_geometry.js') }}"></script>
+
+<!-- Import logic chung cuối cùng -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}

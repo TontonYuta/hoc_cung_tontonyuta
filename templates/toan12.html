@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chuyên đề Toán 12</title>
+  <link rel="stylesheet" href="static/style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- MathJax config -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="toan12.html" class="nav-link active">
+        <i class="fa-solid fa-calculator"></i> Toán 12
+      </a>
+      <a href="sat.html" class="nav-link">
+        <i class="fa-solid fa-book-open"></i> SAT
+      </a>
+      <a href="tsa.html" class="nav-link">
+        <i class="fa-solid fa-pen-ruler"></i> TSA
+      </a>
+      <a href="hsa.html" class="nav-link">
+        <i class="fa-solid fa-graduation-cap"></i> HSA
+      </a>
+    </div>
+    <button id="toggleMusicBtn" onclick="toggleMusic()">🔊 Tắt nhạc nền</button>
+  </nav>
+
+  <div class="container">
+
+    <h1>Chuyên đề Toán 12</h1>
+    <p>Bấm vào từng thẻ để xem nhanh công thức quan trọng và làm quiz luyện tập.</p>
+
+    <div id="library" class="grid-container">
+      <div class="card" onclick="showSnippet('logarit')">
+        <i class="fa-solid fa-square-root-variable"></i>
+        <p>Logarit</p>
+      </div>
+      <div class="card" onclick="showSnippet('daoham')">
+        <i class="fa-solid fa-calculator"></i>
+        <p>Đạo hàm</p>
+      </div>
+      <div class="card" onclick="showSnippet('xacsuatCoDien')">
+        <i class="fa-solid fa-dice"></i>
+        <p>Xác suất cổ điển</p>
+      </div>
+      <div class="card" onclick="showSubtopics('hamso')">
+        <i class="fa-solid fa-chart-line"></i>
+        <p>Hàm số</p>
+      </div>
+      <div class="card" onclick="showSnippet('thongke')">
+        <i class="fa-solid fa-chart-pie"></i>
+        <p>Thống kê</p>
+      </div>
+      <div class="card" onclick="showSnippet('tichphan')">
+        <i style="font-style: normal; font-size: 40px;">∫</i>
+        <p>Tích phân</p>
+      </div>
+      <div class="card" onclick="showSnippet('vecto')">
+        <i class="fa-solid fa-arrows-left-right"></i>
+        <p>Vecto</p>
+      </div>
+      <div class="card" onclick="showSnippet('heOxyz')">
+        <i class="fa-solid fa-cube"></i>
+        <p>Hệ Oxyz</p>
+      </div>
+      <div class="card" onclick="showSnippet('xacsuatDK')">
+        <i class="fa-solid fa-dice-d20"></i>
+        <p>Xác suất có ĐK</p>
+      </div>
+    </div>
+
+    <div id="snippetBox" class="snippet-box">
+      👉 Chọn 1 thẻ phía trên để xem kiến thức ở đây
+    </div>
+
+    <div id="quizBox" class="quiz-box" style="display:none;">
+      <h3>📝 Trắc nghiệm nhanh</h3>
+      <div id="quizQuestion"></div>
+      <ul id="quizOptions"></ul>
+      <div class="quiz-buttons">
+        <button onclick="checkAnswer()">✅ Nộp bài</button>
+        <button onclick="prevQuestion()">⬅ Câu trước</button>
+        <button onclick="nextQuestion()">Câu tiếp ➡</button>
+      </div>
+      <div id="quizResult" class="quiz-result"></div>
+      <div id="quizStats">Kết quả: 0/0</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Website Học Toán. Thiết kế bởi TontonYuta. 
+      Mọi đóng góp xin gửi về 
+      <a href="tel:0963278149">Zalo/SDT: 0963278149</a>
+      <span class="social">
+        <a href="https://www.facebook.com/yuta.primer"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://github.com/TontonYuta"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:huyhoang6altt@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </span>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Quiz và chuyên đề -->
+  <script src="static/js/logarit.js"></script>
+  <script src="static/js/quiz_generator.js"></script>
+  <script src="static/js/quiz_generator_xs.js"></script>
+  <script src="static/js/daoham.js"></script>
+  <script src="static/js/xacsuatCoDien.js"></script>
+  <script src="static/js/hamso.js"></script>
+  <script src="static/js/hamso_chuong1.js"></script>
+  <script src="static/js/hamso_chuong2.js"></script>
+  <script src="static/js/hamso_chuong3.js"></script>
+  <script src="static/js/hamso_chuong4.js"></script>
+  <script src="static/js/hamso_chuong5.js"></script>
+  <script src="static/js/hamso_chuong6.js"></script>
+  <script src="static/js/hamso_chuong7.js"></script>
+  <script src="static/js/thongke.js"></script>
+  <script src="static/js/tichphan.js"></script>
+  <script src="static/js/vecto.js"></script>
+  <script src="static/js/heOxyz.js"></script>
+  <script src="static/js/xacsuatDK.js"></script>
+
+  <!-- Script chính -->
+  <script src="static/js/main.js"></script>
+  <script src="static/script.js" defer></script>
+
+  <!-- Nhạc nền -->
+  <audio id="bgMusic" src="static/audio/bg.mp3" loop></audio>
+  <audio id="soundCorrect" src="static/audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="static/audio/wrong.mp3"></audio>
+
+  <!-- Submenu -->
+  <script>
+    function showSubtopics(type) {
+      const library = document.getElementById("library");
+      if (type === "hamso") {
+        library.innerHTML = `
+          <div class="card" onclick="showSnippet('hamso_dondon')"><p>1. Tính đơn điệu</p></div>
+          <div class="card" onclick="showSnippet('hamso_cuctri')"><p>2. Cực trị</p></div>
+          <div class="card" onclick="showSnippet('hamso_gtln')"><p>3. GTLN - GTNN</p></div>
+          <div class="card" onclick="showSnippet('hamso_tiemcan')"><p>4. Tiệm cận</p></div>
+          <div class="card" onclick="showSnippet('hamso_nhandien')"><p>5. Nhận diện hàm số</p></div>
+          <div class="card" onclick="showSnippet('hamso_tuonggiao')"><p>6. Tương giao đồ thị</p></div>
+          <div class="card" onclick="showSnippet('hamso_ungdung')"><p>7. Ứng dụng thực tế</p></div>
+          <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+        `;
+      }
+    }
+
+    function resetMainTopics() {
+      const library = document.getElementById("library");
+      library.innerHTML = `
+        <div class="card" onclick="showSnippet('logarit')">
+          <i class="fa-solid fa-square-root-variable"></i><p>Logarit</p>
+        </div>
+        <div class="card" onclick="showSnippet('daoham')">
+          <i class="fa-solid fa-calculator"></i><p>Đạo hàm</p>
+        </div>
+        <div class="card" onclick="showSnippet('xacsuatCoDien')">
+          <i class="fa-solid fa-dice"></i><p>Xác suất cổ điển</p>
+        </div>
+        <div class="card" onclick="showSubtopics('hamso')">
+          <i class="fa-solid fa-chart-line"></i><p>Hàm số</p>
+        </div>
+        <div class="card" onclick="showSnippet('thongke')">
+          <i class="fa-solid fa-chart-pie"></i><p>Thống kê</p>
+        </div>
+        <div class="card" onclick="showSnippet('tichphan')">
+          <i style="font-style: normal; font-size: 40px;">∫</i><p>Tích phân</p>
+        </div>
+        <div class="card" onclick="showSnippet('vecto')">
+          <i class="fa-solid fa-arrows-left-right"></i><p>Vecto</p>
+        </div>
+        <div class="card" onclick="showSnippet('heOxyz')">
+          <i class="fa-solid fa-cube"></i><p>Hệ Oxyz</p>
+        </div>
+        <div class="card" onclick="showSnippet('xacsuatDK')">
+          <i class="fa-solid fa-dice-d20"></i><p>Xác suất có ĐK</p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>

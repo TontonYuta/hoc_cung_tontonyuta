@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Luyện thi HSA: Toán học, Ngôn ngữ, Khoa học, Tiếng Anh với công thức, ví dụ, bài tập trắc nghiệm.">
+  <title>Luyện thi HSA</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="content">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="nav-brand">
+          <a href="index.html" aria-label="Trang chủ"><i class="fa-solid fa-house"></i> Trang chủ</a>
+        </div>
+        <button class="menu-toggle" aria-label="Mở/Đóng menu" aria-expanded="false">
+          <i class="fa-solid fa-bars menu-icon"></i>
+          <i class="fa-solid fa-times close-icon"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="toan12.html" class="nav-link"><i class="fa-solid fa-calculator"></i> Toán 12</a>
+          <a href="sat.html" class="nav-link"><i class="fa-solid fa-book-open"></i> SAT</a>
+          <a href="tsa.html" class="nav-link"><i class="fa-solid fa-pen-ruler"></i> TSA</a>
+          <a href="hsa.html" class="nav-link active"><i class="fa-solid fa-graduation-cap"></i> HSA</a>
+          <a href="references.html" class="nav-link"><i class="fa-solid fa-book"></i> Tài liệu tham khảo</a>
+          <a href="hoc-cung-tontonyuta.html" class="nav-link"><i class="fa-solid fa-user-group"></i> Học cùng TontonYuta</a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h1>Luyện thi HSA</h1>
+        <p>Bấm vào từng thẻ để xem nhanh kiến thức và luyện quiz.</p>
+
+        <!-- Quote Box -->
+        <section class="quote-box" role="complementary">
+          <p id="randomQuote">"Tư duy là ngọn đèn soi đường – luyện tập mỗi ngày để vững vàng hơn!"</p>
+        </section>
+
+        <!-- HSA Structure: Tabs -->
+<section id="hsa-structure" class="hsa-structure">
+  <div class="tabs" role="tablist">
+    <button class="tab-btn active" data-target="#hsaTable" aria-selected="true" role="tab">Bảng tổng quan</button>
+    <button class="tab-btn" data-target="#hsaCards" aria-selected="false" role="tab">Card trực quan</button>
+  </div>
+
+  <!-- View 1: Table -->
+  <div id="hsaTable" class="tab-panel" role="tabpanel">
+    <table class="hsa-table" aria-label="Cấu trúc bài thi HSA 2025">
+      <thead>
+        <tr>
+          <th>Phần thi</th>
+          <th>Thời lượng</th>
+          <th>Số câu</th>
+          <th>Điểm</th>
+          <th>Nội dung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Toán học &amp; Xử lí số liệu</td>
+          <td>75'</td>
+          <td>50</td>
+          <td>50</td>
+          <td>35 câu trắc nghiệm + 15 câu điền đáp án. Đại số, Giải tích, Hình học, Xác suất, mô hình hóa.</td>
+        </tr>
+        <tr>
+          <td>Ngôn ngữ – Văn học</td>
+          <td>60'</td>
+          <td>50</td>
+          <td>50</td>
+          <td>25 câu đơn + 5 chùm (mỗi chùm 5 câu). Đọc hiểu, ngữ pháp, văn học, ngôn ngữ, văn hóa – xã hội.</td>
+        </tr>
+        <tr>
+          <td>Khoa học <br> hoặc <br> Tiếng Anh</td>
+          <td>60'</td>
+          <td>50</td>
+          <td>50</td>
+          <td><b>Khoa học:</b> chọn 3/5 (Lý, Hóa, Sinh, Sử, Địa). Có chùm câu hỏi + điền đáp án.<br><b>Tiếng Anh:</b> 35 câu đơn + 3 chùm đọc hiểu + 5 câu tình huống.</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><strong>Tổng</strong></td>
+          <td>195'</td>
+          <td>150</td>
+          <td>150</td>
+          <td>Làm trên máy tính. Điểm quy đổi theo độ khó + số câu đúng.</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- View 2: Cards -->
+  <div id="hsaCards" class="tab-panel" role="tabpanel" hidden>
+    <div class="grid-container three-cols">
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-square-root-variable"></i>
+          <h4>Toán học &amp; Số liệu</h4>
+          <span class="info-badge">75' · 50 câu · 50đ</span>
+        </div>
+        <p class="card-desc">
+          35 câu trắc nghiệm + 15 câu điền đáp án. 
+          Nội dung: Đại số, Giải tích, Hình học, Xác suất – Thống kê, mô hình hóa.
+        </p>
+      </div>
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-book"></i>
+          <h4>Ngôn ngữ – Văn học</h4>
+          <span class="info-badge">60' · 50 câu · 50đ</span>
+        </div>
+        <p class="card-desc">
+          25 câu đơn + 5 chùm (mỗi chùm 5 câu). 
+          Đọc hiểu, ngữ pháp, ngữ nghĩa, văn học, xã hội, văn hóa.
+        </p>
+      </div>
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-flask"></i>
+          <h4>Khoa học / Tiếng Anh</h4>
+          <span class="info-badge">60' · 50 câu · 50đ</span>
+        </div>
+        <p class="card-desc">
+          <b>Khoa học:</b> chọn 3/5 (Lý, Hóa, Sinh, Sử, Địa). Có chùm câu hỏi + điền đáp án.<br>
+          <b>Tiếng Anh:</b> 35 câu đơn + 3 chùm đọc hiểu + 5 câu tình huống.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- HSA Submenu -->
+        <div id="library" class="grid-container">
+          <div class="card" onclick="showSubtopics('hsa_math')"><i class="fa-solid fa-square-root-variable"></i><p>Toán học</p></div>
+          <div class="card" onclick="showSubtopics('hsa_language')"><i class="fa-solid fa-book"></i><p>Ngôn ngữ – Văn học</p></div>
+          <div class="card" onclick="showSubtopics('hsa_science')"><i class="fa-solid fa-flask"></i><p>Khoa học</p></div>
+          <div class="card" onclick="showSubtopics('hsa_english')"><i class="fa-solid fa-language"></i><p>Tiếng Anh</p></div>
+        </div>
+
+        <div id="snippetBox" class="snippet-box">👉 Chọn 1 thẻ phía trên để xem kiến thức ở đây</div>
+
+        <div id="quizBox" class="quiz-box" style="display:none;">
+          <h3>📝 Trắc nghiệm nhanh</h3>
+          <div id="quizQuestion"></div>
+          <ul id="quizOptions"></ul>
+          <div class="quiz-buttons">
+            <button onclick="checkAnswer()">✅ Nộp bài</button>
+            <button onclick="prevQuestion()">⬅ Câu trước</button>
+            <button onclick="nextQuestion()">Câu tiếp ➡</button>
+          </div>
+          <div id="quizResult" class="quiz-result"></div>
+          <div id="quizStats">Kết quả: 0/0</div>
+        </div>
+      </div>
+    </main>
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- HSA Scripts -->
+  <!-- Math -->
+  <script src="static/js/hsa_math_algebra.js"></script>
+  <script src="static/js/hsa_math_calculus.js"></script>
+  <script src="static/js/hsa_math_geometry.js"></script>
+  <script src="static/js/hsa_math_probability.js"></script>
+
+  <!-- Language -->
+  <script src="static/js/hsa_lang_reading.js"></script>
+  <script src="static/js/hsa_lang_grammar.js"></script>
+  <script src="static/js/hsa_lang_literature.js"></script>
+
+  <!-- Science -->
+  <script src="static/js/hsa_sci_physics.js"></script>
+  <script src="static/js/hsa_sci_chemistry.js"></script>
+  <script src="static/js/hsa_sci_biology.js"></script>
+  <script src="static/js/hsa_sci_history.js"></script>
+  <script src="static/js/hsa_sci_geography.js"></script>
+
+  <!-- English -->
+  <script src="static/js/hsa_eng_vocab.js"></script>
+  <script src="static/js/hsa_eng_reading.js"></script>
+  <script src="static/js/hsa_eng_inference.js"></script>
+
+  <!-- Core -->
+  <script src="static/js/quiz_generator.js"></script>
+  <script src="static/js/main.js"></script>
+  <script src="static/script.js" defer></script>
+
+  <!-- Âm thanh -->
+  <audio id="bgMusic" src="static/audio/bg.mp3" loop></audio>
+  <audio id="soundCorrect" src="static/audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="static/audio/wrong.mp3"></audio>
+
+  <!-- Submenu JS -->
+  <script>
+    function showSubtopics(type) {
+      const library = document.getElementById("library");
+
+      if (type === "hsa_math") {
+        library.innerHTML = `
+          <div class="card" onclick="showSnippet('hsa_math_algebra')"><p>1. Đại số &amp; Số học</p></div>
+          <div class="card" onclick="showSnippet('hsa_math_calculus')"><p>2. Giải tích</p></div>
+          <div class="card" onclick="showSnippet('hsa_math_geometry')"><p>3. Hình học</p></div>
+          <div class="card" onclick="showSnippet('hsa_math_probability')"><p>4. Thống kê &amp; Xác suất</p></div>
+          <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+        `;
+      }
+      else if (type === "hsa_language") {
+        library.innerHTML = `
+          <div class="card" onclick="showSnippet('hsa_lang_reading')"><p>1. Đọc hiểu văn bản</p></div>
+          <div class="card" onclick="showSnippet('hsa_lang_grammar')"><p>2. Ngữ pháp – Ngữ nghĩa</p></div>
+          <div class="card" onclick="showSnippet('hsa_lang_literature')"><p>3. Văn học</p></div>
+          <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+        `;
+      }
+      else if (type === "hsa_science") {
+        library.innerHTML = `
+          <div class="card" onclick="showSnippet('hsa_sci_physics')"><p>1. Vật lí</p></div>
+          <div class="card" onclick="showSnippet('hsa_sci_chemistry')"><p>2. Hóa học</p></div>
+          <div class="card" onclick="showSnippet('hsa_sci_biology')"><p>3. Sinh học</p></div>
+          <div class="card" onclick="showSnippet('hsa_sci_history')"><p>4. Lịch sử</p></div>
+          <div class="card" onclick="showSnippet('hsa_sci_geography')"><p>5. Địa lí</p></div>
+          <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+        `;
+      }
+      else if (type === "hsa_english") {
+        library.innerHTML = `
+          <div class="card" onclick="showSnippet('hsa_eng_vocab')"><p>1. Từ vựng – Ngữ pháp</p></div>
+          <div class="card" onclick="showSnippet('hsa_eng_reading')"><p>2. Đọc hiểu</p></div>
+          <div class="card" onclick="showSnippet('hsa_eng_inference')"><p>3. Suy luận &amp; tình huống</p></div>
+          <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+        `;
+      }
+    }
+
+    function resetMainTopics() {
+      location.reload(); 
+    }
+  </script>
+
+</body>
+</html>

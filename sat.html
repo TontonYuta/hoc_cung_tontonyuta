@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Luyện thi SAT: công thức, ví dụ, bài tập trắc nghiệm có lời giải chi tiết.">
+  <title>Luyện thi SAT</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="content">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="nav-brand">
+          <a href="index.html" aria-label="Trang chủ"><i class="fa-solid fa-house"></i> Trang chủ</a>
+        </div>
+        <button class="menu-toggle" aria-label="Mở/Đóng menu" aria-expanded="false">
+          <i class="fa-solid fa-bars menu-icon"></i>
+          <i class="fa-solid fa-times close-icon"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="toan12.html" class="nav-link"><i class="fa-solid fa-calculator"></i> Toán 12</a>
+          <a href="sat.html" class="nav-link active"><i class="fa-solid fa-book-open"></i> SAT</a>
+          <a href="tsa.html" class="nav-link"><i class="fa-solid fa-pen-ruler"></i> TSA</a>
+          <a href="hsa.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> HSA</a>
+          <a href="references.html" class="nav-link"><i class="fa-solid fa-book"></i> Tài liệu tham khảo</a>
+          <a href="hoc-cung-tontonyuta.html" class="nav-link"><i class="fa-solid fa-user-group"></i> Học cùng TontonYuta</a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h1>Luyện thi SAT</h1>
+        <p>Bấm vào từng thẻ để xem nhanh công thức và luyện quiz.</p>
+
+        <!-- Quote Box -->
+        <section class="quote-box" role="complementary">
+          <p id="randomQuote">"Practice makes perfect – Luyện tập mỗi ngày để thành công!"</p>
+        </section>
+
+        <!-- SAT Structure: Tabs -->
+<section id="sat-structure" class="sat-structure">
+  <div class="tabs" role="tablist">
+    <button class="tab-btn active" data-target="#satTable" aria-selected="true" role="tab">Bảng tổng quan</button>
+    <button class="tab-btn" data-target="#satCards" aria-selected="false" role="tab">Card trực quan</button>
+  </div>
+
+  <!-- View 1: Table -->
+  <div id="satTable" class="tab-panel" role="tabpanel">
+    <table class="sat-table" aria-label="Cấu trúc bài thi SAT">
+      <thead>
+        <tr>
+          <th>Phần thi</th>
+          <th>Thời lượng</th>
+          <th>Số câu</th>
+          <th>Tỉ trọng (~)</th>
+          <th>Nội dung chính</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reading &amp; Writing</td>
+          <td>64'</td>
+          <td>54</td>
+          <td>50%</td>
+          <td>Đọc hiểu văn bản ngắn, ngữ pháp, từ vựng, phân tích logic &amp; bằng chứng</td>
+        </tr>
+        <tr>
+          <td>Math</td>
+          <td>70'</td>
+          <td>44</td>
+          <td>50%</td>
+          <td>Đại số, phương trình, hàm số, hình học, xác suất, thống kê, ứng dụng</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><strong>Tổng</strong></td>
+          <td>134'</td>
+          <td>98</td>
+          <td>100%</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- View 2: Cards -->
+  <div id="satCards" class="tab-panel" role="tabpanel" hidden>
+    <div class="grid-container two-cols">
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-book-open"></i>
+          <h4>Reading &amp; Writing</h4>
+          <span class="info-badge">64' · 54 câu · 50%</span>
+        </div>
+        <p class="card-desc">
+          Đọc hiểu đoạn văn (~100 từ), câu hỏi ngữ pháp, từ vựng trong ngữ cảnh, 
+          phân tích lập luận và bằng chứng. Đánh giá kỹ năng ngôn ngữ học thuật.
+        </p>
+      </div>
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-square-root-variable"></i>
+          <h4>Math</h4>
+          <span class="info-badge">70' · 44 câu · 50%</span>
+        </div>
+        <p class="card-desc">
+          Đại số, phương trình, bất phương trình, hàm số, hình học, 
+          xác suất, thống kê và ứng dụng thực tế. Một số câu cho phép dùng máy tính.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <div id="library" class="grid-container">
+          <div class="card" onclick="showSubtopics('sat_math')"><i class="fa-solid fa-square-root-variable"></i><p>SAT Math</p></div>
+          <div class="card" onclick="showSubtopics('sat_reading')"><i class="fa-solid fa-book"></i><p>SAT Reading</p></div>
+          <div class="card" onclick="showSubtopics('sat_writing')"><i class="fa-solid fa-pen"></i><p>SAT Writing</p></div>
+        </div>
+
+        <div id="snippetBox" class="snippet-box">👉 Chọn 1 thẻ phía trên để xem kiến thức ở đây</div>
+
+        <div id="quizBox" class="quiz-box" style="display:none;">
+          <h3>📝 Trắc nghiệm nhanh</h3>
+          <div id="quizQuestion"></div>
+          <ul id="quizOptions"></ul>
+          <div class="quiz-buttons">
+            <button onclick="checkAnswer()">✅ Nộp bài</button>
+            <button onclick="prevQuestion()">⬅ Câu trước</button>
+            <button onclick="nextQuestion()">Câu tiếp ➡</button>
+          </div>
+          <div id="quizResult" class="quiz-result"></div>
+          <div id="quizStats">Kết quả: 0/0</div>
+        </div>
+      </div>
+    </main>
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- SAT Math -->
+  <script src="static/js/sat_math_algebra1.js"></script>
+  <script src="static/js/sat_math_algebra2.js"></script>
+  <script src="static/js/sat_math_advanced.js"></script>
+  <script src="static/js/sat_math_problem.js"></script>
+  <script src="static/js/sat_math_data.js"></script>
+  <script src="static/js/sat_math_geometry.js"></script>
+  <script src="static/js/sat_math_trigonometry.js"></script>
+
+<!-- SAT Reading -->
+<script src="static/js/sat_reading_vocab.js"></script>
+<script src="static/js/sat_reading_passage1.js"></script>
+<script src="static/js/sat_reading_passage2.js"></script>
+<script src="static/js/sat_reading_passage3.js"></script>
+<script src="static/js/sat_reading_graph.js"></script>
+
+<!-- SAT Writing -->
+<script src="static/js/sat_writing_grammar1.js"></script>
+<script src="static/js/sat_writing_grammar2.js"></script>
+<script src="static/js/sat_writing_punctuation.js"></script>
+<script src="static/js/sat_writing_style.js"></script>
+<script src="static/js/sat_writing_transition.js"></script>
+
+  <!-- Core -->
+  <script src="static/js/quiz_generator.js"></script>
+  <script src="static/js/main.js"></script>
+  <script src="static/script.js" defer></script>
+
+  <!-- Âm thanh -->
+  <audio id="bgMusic" src="static/audio/bg.mp3" loop></audio>
+  <audio id="soundCorrect" src="static/audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="static/audio/wrong.mp3"></audio>
+
+  <!-- Submenu JS -->
+  <script>
+    function showSubtopics(type) {
+      const library = document.getElementById("library");
+
+      if (type === "sat_math") {
+        library.innerHTML = `
+          <div class="card" onclick="showSnippet('sat_math_algebra1')"><p>1. Algebra I</p></div>
+          <div class="card" onclick="showSnippet('sat_math_algebra2')"><p>2. Algebra II</p></div>
+          <div class="card" onclick="showSnippet('sat_math_advanced')"><p>3. Advanced Math</p></div>
+          <div class="card" onclick="showSnippet('sat_math_problem')"><p>4. Problem Solving</p></div>
+          <div class="card" onclick="showSnippet('sat_math_data')"><p>5. Data Analysis</p></div>
+          <div class="card" onclick="showSnippet('sat_math_geometry')"><p>6. Geometry</p></div>
+          <div class="card" onclick="showSnippet('sat_math_trigonometry')"><p>7. Trigonometry</p></div>
+          <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+        `;
+      }
+else if (type === "sat_reading") {
+  library.innerHTML = `
+    <div class="card" onclick="showSnippet('sat_reading_vocab')"><p>1. Vocabulary</p></div>
+    <div class="card" onclick="showSnippet('sat_reading_passage1')"><p>2. Reading Passage – Văn học</p></div>
+    <div class="card" onclick="showSnippet('sat_reading_passage2')"><p>3. Reading Passage – Khoa học xã hội</p></div>
+    <div class="card" onclick="showSnippet('sat_reading_passage3')"><p>4. Reading Passage – Khoa học tự nhiên</p></div>
+    <div class="card" onclick="showSnippet('sat_reading_graph')"><p>5. Đọc hiểu biểu đồ & bảng</p></div>
+    <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+  `;
+}
+
+else if (type === "sat_writing") {
+  library.innerHTML = `
+    <div class="card" onclick="showSnippet('sat_writing_grammar1')"><p>1. Grammar – Subject & Verb</p></div>
+    <div class="card" onclick="showSnippet('sat_writing_grammar2')"><p>2. Grammar – Pronoun & Modifier</p></div>
+    <div class="card" onclick="showSnippet('sat_writing_punctuation')"><p>3. Punctuation</p></div>
+    <div class="card" onclick="showSnippet('sat_writing_style')"><p>4. Style & Expression</p></div>
+    <div class="card" onclick="showSnippet('sat_writing_transition')"><p>5. Transition & Logic</p></div>
+    <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+  `;
+}
+
+    }
+
+    function resetMainTopics() {
+      location.reload(); 
+    }
+  </script>
+
+</body>
+</html>

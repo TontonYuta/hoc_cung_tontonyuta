@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Luyện thi TSA: logic, toán học, đọc hiểu và giải quyết vấn đề.">
+  <title>Luyện thi TSA</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="content">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="nav-brand">
+          <a href="index.html" aria-label="Trang chủ"><i class="fa-solid fa-house"></i> Trang chủ</a>
+        </div>
+        <button class="menu-toggle" aria-label="Mở/Đóng menu" aria-expanded="false">
+          <i class="fa-solid fa-bars menu-icon"></i>
+          <i class="fa-solid fa-times close-icon"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="toan12.html" class="nav-link"><i class="fa-solid fa-calculator"></i> Toán 12</a>
+          <a href="sat.html" class="nav-link"><i class="fa-solid fa-book-open"></i> SAT</a>
+          <a href="tsa.html" class="nav-link active"><i class="fa-solid fa-pen-ruler"></i> TSA</a>
+          <a href="hsa.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> HSA</a>
+          <a href="references.html" class="nav-link"><i class="fa-solid fa-book"></i> Tài liệu tham khảo</a>
+          <a href="hoc-cung-tontonyuta.html" class="nav-link"><i class="fa-solid fa-user-group"></i> Học cùng TontonYuta</a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h1>Luyện thi TSA</h1>
+        <p>Bấm vào từng thẻ để xem nhanh kiến thức và luyện quiz.</p>
+
+        <!-- Quote Box -->
+        <section class="quote-box" role="complementary">
+          <p id="randomQuote">"Tư duy logic là sức mạnh của bộ não con người!"</p>
+        </section>
+
+        <!-- TSA Structure: Tabs -->
+<section id="tsa-structure" class="tsa-structure">
+  <div class="tabs" role="tablist">
+    <button class="tab-btn active" data-target="#tsaTable" aria-selected="true" role="tab">Bảng tổng quan</button>
+    <button class="tab-btn" data-target="#tsaCards" aria-selected="false" role="tab">Card trực quan</button>
+  </div>
+
+  <!-- View 1: Table -->
+  <div id="tsaTable" class="tab-panel" role="tabpanel">
+    <table class="tsa-table" aria-label="Cấu trúc bài thi TSA HUST">
+      <thead>
+        <tr>
+          <th>Phần thi</th>
+          <th>Thời lượng</th>
+          <th>Số câu (~)</th>
+          <th>Trọng số (~)</th>
+          <th>Mục tiêu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tư duy Toán học</td>
+          <td>60'</td>
+          <td>~40</td>
+          <td>~40%</td>
+          <td>Tư duy định lượng, mô hình hóa, tính toán, lập luận</td>
+        </tr>
+        <tr>
+          <td>Tư duy Đọc hiểu</td>
+          <td>30'</td>
+          <td>~20</td>
+          <td>~20%</td>
+          <td>Đọc nhanh – hiểu sâu, phân tích logic, tổng hợp thông tin</td>
+        </tr>
+        <tr>
+          <td>Tư duy Khoa học / GQVĐ</td>
+          <td>60'</td>
+          <td>~40</td>
+          <td>~40%</td>
+          <td>Phân tích dữ liệu/đồ thị, suy luận, chọn phương án hợp lý</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><strong>Tổng</strong></td>
+          <td>150'</td>
+          <td>~100</td>
+          <td>~100%</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- View 2: Cards -->
+  <div id="tsaCards" class="tab-panel" role="tabpanel" hidden>
+    <div class="grid-container three-cols">
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-square-root-variable"></i>
+          <h4>Toán học</h4>
+          <span class="info-badge">60' · ~40c · ~40%</span>
+        </div>
+        <p class="card-desc">
+          Số học, đại số, hàm số, hình học, thống kê &amp; xác suất. 
+          Nhấn mạnh mô hình hóa, tính toán, lập luận, quyết định dựa trên số liệu.
+        </p>
+      </div>
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-book"></i>
+          <h4>Đọc hiểu</h4>
+          <span class="info-badge">30' · ~20c · ~20%</span>
+        </div>
+        <p class="card-desc">
+          Văn bản 800–1000 từ (khoa học, công nghệ, kinh tế…). 
+          Tìm ý chính, chi tiết, quan hệ nhân quả, nghĩa theo ngữ cảnh, tổng hợp đa văn bản.
+        </p>
+      </div>
+      <div class="card soft">
+        <div class="card-head">
+          <i class="fa-solid fa-flask"></i>
+          <h4>Khoa học / GQVĐ</h4>
+          <span class="info-badge">60' · ~40c · ~40%</span>
+        </div>
+        <p class="card-desc">
+          Đồ thị/bảng/sơ đồ, tóm tắt nghiên cứu, quan điểm xung đột. 
+          Phân tích dữ liệu, suy luận, đánh giá phương pháp &amp; kết quả.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <div id="library" class="grid-container">
+<div class="card" onclick="showSubtopics('tsa_math')"><i class="fa-solid fa-square-root-variable"></i><p>Tư duy Toán học</p></div>
+<div class="card" onclick="showSubtopics('tsa_reading')"><i class="fa-solid fa-book"></i><p>Tư duy Đọc hiểu</p></div>
+<div class="card" onclick="showSubtopics('tsa_science')"><i class="fa-solid fa-flask"></i><p>Tư duy Khoa học / GQVĐ</p></div>
+    </div>
+
+        <div id="snippetBox" class="snippet-box">👉 Chọn 1 thẻ phía trên để xem kiến thức ở đây</div>
+
+        <div id="quizBox" class="quiz-box" style="display:none;">
+          <h3>📝 Trắc nghiệm nhanh</h3>
+          <div id="quizQuestion"></div>
+          <ul id="quizOptions"></ul>
+          <div class="quiz-buttons">
+            <button onclick="checkAnswer()">✅ Nộp bài</button>
+            <button onclick="prevQuestion()">⬅ Câu trước</button>
+            <button onclick="nextQuestion()">Câu tiếp ➡</button>
+          </div>
+          <div id="quizResult" class="quiz-result"></div>
+          <div id="quizStats">Kết quả: 0/0</div>
+        </div>
+      </div>
+    </main>
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- TSA HUST Scripts -->
+
+  <!-- Toán học -->
+  <script src="static/js/tsa_math_algebra.js"></script>
+  <script src="static/js/tsa_math_function.js"></script>
+  <script src="static/js/tsa_math_geometry.js"></script>
+  <script src="static/js/tsa_math_probability.js"></script>
+
+  <!-- Đọc hiểu -->
+  <script src="static/js/tsa_reading_science.js"></script>
+  <script src="static/js/tsa_reading_economy.js"></script>
+  <script src="static/js/tsa_reading_literature.js"></script>
+
+  <!-- Khoa học / Giải quyết vấn đề -->
+  <script src="static/js/tsa_science_graph.js"></script>
+  <script src="static/js/tsa_science_experiment.js"></script>
+  <script src="static/js/tsa_science_conflict.js"></script>
+
+  <!-- Core -->
+  <script src="static/js/quiz_generator.js"></script>
+  <script src="static/js/main.js"></script>
+  <script src="static/script.js" defer></script>
+
+  <!-- Âm thanh -->
+  <audio id="bgMusic" src="static/audio/bg.mp3" loop></audio>
+  <audio id="soundCorrect" src="static/audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="static/audio/wrong.mp3"></audio>
+
+  <!-- Submenu JS -->
+  <script>
+function showSubtopics(type) {
+  const library = document.getElementById("library");
+
+  if (type === "tsa_math") {
+    library.innerHTML = `
+      <div class="card" onclick="showSnippet('tsa_math_algebra')"><p>1. Đại số & Số học</p></div>
+      <div class="card" onclick="showSnippet('tsa_math_function')"><p>2. Hàm số</p></div>
+      <div class="card" onclick="showSnippet('tsa_math_geometry')"><p>3. Hình học</p></div>
+      <div class="card" onclick="showSnippet('tsa_math_probability')"><p>4. Thống kê & Xác suất</p></div>
+      <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+    `;
+  }
+  else if (type === "tsa_reading") {
+    library.innerHTML = `
+      <div class="card" onclick="showSnippet('tsa_reading_science')"><p>1. Văn bản Khoa học – Công nghệ</p></div>
+      <div class="card" onclick="showSnippet('tsa_reading_economy')"><p>2. Văn bản Kinh tế – Xã hội</p></div>
+      <div class="card" onclick="showSnippet('tsa_reading_literature')"><p>3. Văn bản Văn học – Báo chí</p></div>
+      <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+    `;
+  }
+  else if (type === "tsa_science") {
+    library.innerHTML = `
+      <div class="card" onclick="showSnippet('tsa_science_graph')"><p>1. Đồ thị, bảng số liệu</p></div>
+      <div class="card" onclick="showSnippet('tsa_science_experiment')"><p>2. Tóm tắt nghiên cứu & thí nghiệm</p></div>
+      <div class="card" onclick="showSnippet('tsa_science_conflict')"><p>3. Quan điểm xung đột</p></div>
+      <div class="card" onclick="resetMainTopics()"><p>⬅ Quay lại</p></div>
+    `;
+  }
+}
+
+function resetMainTopics() {
+  location.reload();
+}
+
+  </script>
+
+</body>
+</html>

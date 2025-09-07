@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}Website Toán{% endblock %}</title>
+
+  <!-- SEO mặc định, có thể override trong block head -->
+  <meta name="description" content="Website học toán online với TontonYuta. Ôn tập Toán 12, SAT, TSA, HSA cùng tài liệu, quiz và cộng đồng học tập.">
+  <meta name="keywords" content="TontonYuta, học toán, Toán 12, SAT, TSA, HSA, luyện thi, quiz toán">
+  <meta name="author" content="TontonYuta">
+  <meta name="robots" content="index, follow">
+
+  <!-- Cho từng trang con thêm meta riêng -->
+  {% block head %}{% endblock %}
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- MathJax config -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="/" aria-label="Trang chủ"><i class="fa-solid fa-house"></i> Trang chủ</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Mở/Đóng menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="/toan12" class="nav-link {% if request.path.startswith('/toan12') %}active{% endif %}">
+        <i class="fa-solid fa-calculator"></i> Toán 12
+      </a>
+      <a href="/sat" class="nav-link {% if request.path.startswith('/sat') %}active{% endif %}">
+        <i class="fa-solid fa-book-open"></i> SAT
+      </a>
+      <a href="/tsa" class="nav-link {% if request.path.startswith('/tsa') %}active{% endif %}">
+        <i class="fa-solid fa-pen-ruler"></i> TSA
+      </a>
+      <a href="/hsa" class="nav-link {% if request.path.startswith('/hsa') %}active{% endif %}">
+        <i class="fa-solid fa-graduation-cap"></i> HSA
+      </a>
+    </div>
+    <button id="toggleMusicBtn" onclick="toggleMusic()" aria-label="Bật/Tắt nhạc nền">🔊 Tắt nhạc</button>
+  </nav>
+
+  <!-- Nội dung -->
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Website Học Toán. Thiết kế bởi <strong>TontonYuta</strong>. 
+      Mọi đóng góp xin gửi về 
+      <a href="tel:0963278149" aria-label="Zalo/SĐT">Zalo/SĐT: 0963278149</a>
+      <span class="social">
+        <a href="https://www.facebook.com/yuta.primer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://github.com/TontonYuta" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:huyhoang6altt@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </span>
+    </p>
+  </footer>
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Script -->
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  
+  <!-- Âm thanh -->
+  <audio id="bgMusic" src="{{ url_for('static', filename='audio/bg.mp3') }}" loop></audio>
+  <audio id="soundCorrect" src="{{ url_for('static', filename='audio/correct.mp3') }}"></audio>
+  <audio id="soundWrong" src="{{ url_for('static', filename='audio/wrong.mp3') }}"></audio>
+
+</body>
+</html>

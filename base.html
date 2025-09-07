@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Website Toán{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- MathJax config -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+    };
+  </script>
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="/"><i class="fa-solid fa-house"></i> Trang chủ</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="/toan12" class="nav-link {% if request.path.startswith('/toan12') %}active{% endif %}">
+        <i class="fa-solid fa-calculator"></i> Toán 12
+      </a>
+      <a href="/sat" class="nav-link {% if request.path.startswith('/sat') %}active{% endif %}">
+        <i class="fa-solid fa-book-open"></i> SAT
+      </a>
+      <a href="/tsa" class="nav-link {% if request.path.startswith('/tsa') %}active{% endif %}">
+        <i class="fa-solid fa-pen-ruler"></i> TSA
+      </a>
+      <a href="/hsa" class="nav-link {% if request.path.startswith('/hsa') %}active{% endif %}">
+        <i class="fa-solid fa-graduation-cap"></i> HSA
+      </a>
+    </div>
+    <button id="toggleMusicBtn" onclick="toggleMusic()">🔊 Tắt nhạc nền</button>
+
+  </nav>
+
+  <!-- Nội dung -->
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Website Học Toán. Thiết kế bởi TontonYuta. 
+      Mọi đóng góp xin gửi về 
+      <a href="tel:0963278149">Zalo/SDT: 0963278149</a>
+      <span class="social">
+        <a href="https://www.facebook.com/yuta.primer"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://github.com/TontonYuta"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:huyhoang6altt@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </span>
+    </p>
+  </footer>
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Script -->
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  
+  
+  
+  <audio id="bgMusic" src="/static/audio/bg.mp3" loop></audio>
+  <audio id="soundCorrect" src="/static/audio/correct.mp3"></audio>
+  <audio id="soundWrong" src="/static/audio/wrong.mp3"></audio>
+
+  
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Học toán online cùng TontonYuta với tài liệu và bài tập Toán 12, SAT, TSA, HSA. Kết nối qua Discord, Facebook, Zalo để học hiệu quả hơn!">
+  <meta name="keywords" content="TontonYuta, học toán online, Toán 12, SAT, TSA, HSA, tài liệu học tập, bài tập toán">
+  <meta name="author" content="TontonYuta">
+  <title>Website Học Toán - TontonYuta</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-brand">
+    <a href="index.html" aria-label="Trang chủ"><i class="fa-solid fa-house"></i> Trang chủ</a>
+  </div>
+  <button class="menu-toggle" aria-label="Mở/Đóng menu" aria-expanded="false">
+    <i class="fa-solid fa-bars menu-icon"></i>
+    <i class="fa-solid fa-times close-icon"></i>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="toan12.html" class="nav-link"><i class="fa-solid fa-calculator"></i> Toán 12</a>
+    <a href="sat.html" class="nav-link"><i class="fa-solid fa-book-open"></i> SAT</a>
+    <a href="tsa.html" class="nav-link"><i class="fa-solid fa-pen-ruler"></i> TSA</a>
+    <a href="hsa.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> HSA</a>
+    <a href="references.html" class="nav-link"><i class="fa-solid fa-book"></i> Tài liệu tham khảo</a>
+    <a href="hoc-cung-tontonyuta.html" class="nav-link"><i class="fa-solid fa-user-group"></i> Học cùng TontonYuta</a>
+  </div>
+</nav>
+
+  <main class="content">
+    <div class="container">
+      <section class="hero" role="banner">
+        <h1>🎓 Website học Toán cùng TontonYuta</h1>
+        <p>Học Toán 12, luyện thi SAT, TSA, HSA cùng hệ thống bài giảng, quiz và tài liệu chuyên sâu.</p>
+        <div class="cta-buttons">
+          <a href="toan12.html" class="btn-main">Bắt đầu học Toán 12</a>
+          <a href="hoc-cung-tontonyuta.html" class="btn-main">Kết nối ngay</a>
+        </div>
+      </section>
+
+<!-- Quote Box dùng chung -->
+<section class="quote-box" role="complementary">
+  <p id="randomQuote">"Học hôm nay để làm chủ ngày mai."</p>
+</section>
+
+
+      <section class="grid-container">
+        <div class="card" onclick="location.href='toan12.html'">
+          <i class="fa-solid fa-calculator"></i>
+          <h3>Toán 12</h3>
+          <p>Hệ thống công thức, ví dụ, và quiz theo từng chuyên đề như: đạo hàm, tích phân, số phức...</p>
+        </div>
+        <div class="card" onclick="location.href='sat.html'">
+          <i class="fa-solid fa-book-open"></i>
+          <h3>SAT</h3>
+          <p>Luyện tập phần toán SAT với chiến lược giải nhanh, bẫy thường gặp, và đề thi thử.</p>
+        </div>
+        <div class="card" onclick="location.href='tsa.html'">
+          <i class="fa-solid fa-pen-ruler"></i>
+          <h3>TSA</h3>
+          <p>Ôn luyện kỹ năng suy luận logic, giải quyết vấn đề – bài thi đầu vào các trường như Oxford, Cambridge.</p>
+        </div>
+        <div class="card" onclick="location.href='hsa.html'">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>HSA</h3>
+          <p>Đề thi ĐGNL HSA cho khối chuyên Sư phạm và các chương trình đại học tài năng.</p>
+        </div>
+        <div class="card" onclick="location.href='references.html'">
+          <i class="fa-solid fa-book"></i>
+          <h3>Tài liệu tham khảo</h3>
+          <p>Link sách, đề thi, học liệu hay từ các trường, giáo viên, cộng đồng.</p>
+        </div>
+        <div class="card" onclick="location.href='hoc-cung-tontonyuta.html'">
+          <i class="fa-solid fa-user-group"></i>
+          <h3>Kết nối học tập</h3>
+          <p>Tham gia nhóm học, livestream bài giảng, luyện tập có người đồng hành cùng TontonYuta.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 TontonYuta. Thiết kế bởi <a href="https://github.com/TontonYuta" rel="noopener">TontonYuta</a>. 
+      Liên hệ: <a href="tel:0963278149">Zalo/SĐT: 0963278149</a>
+      <span class="social">
+        <a href="https://www.facebook.com/yuta.primer" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://github.com/TontonYuta" rel="noopener"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:huyhoang6altt@gmail.com" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
+      </span>
+    </p>
+  </footer>
+
+  <audio id="bgMusic" autoplay loop>
+  <source src="static/audio/bg.mp3" type="audio/mpeg">
+</audio>
+
+  <script src="static/js/main.js" defer></script>
+  
+
+</body>
+</html>
